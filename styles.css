@@ -216,3 +216,48 @@ body {
     margin-bottom: 50px;
     margin-left: 415px; 
 }
+/* Фон для модального окна */
+.maskPage {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+/* Параметры модального окна */
+.modalWindow {
+    background-color: #ffffff;
+    width: 30%;
+    margin: auto;
+    margin-top: 120px;
+    border-radius: 5px;
+    padding: 10px;
+}
+/* Параметры текста результата действий калькулятора */
+.resultCalc {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Параметры кнопки "закрыть" в модальном окне вывода результата действий калькулятора */
+.resultClose {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+/* Параметры текста на кнопке */
+.resultClose > button {
+    background-color: #0068c9;
+    color: #ffffff;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.resultClose > button:hover {
+    background-color: #004C93;
+    color:rgb(140, 140, 140);
+}
