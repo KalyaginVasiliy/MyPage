@@ -15,6 +15,7 @@
 
 <body>
     <div class="mainBox">
+        <!-- Размещаем верхнее меню -->
         <div class="boxMainMenu">
             <div style="display: flex;">
                 <div class="textMyName">Василий Калягин</div>
@@ -26,6 +27,7 @@
                 <div class="textMainMenu"><a href="#contacts", style="color: #ffffff;">Контакты</a></div>             
             </div>
         </div>
+        <!-- Делаем блок "Обо мне" -->
         <div style="display: flex;">
             <div id="aboutMe">
                 <div class="textMyNameIs"> Меня зовут Василий </div>
@@ -36,6 +38,7 @@
             </div>
             <div class="myImage"><img src="MyPhoto.jpg"></div>
         </div>
+        <!-- Размещаем блок "Моя деятельность" -->
         <div id="myActivity", style="padding-top: 102px; margin-top: -102px"></div>
         <div class="myActivityBox"> 
             <div class="textBlockHeader"> 
@@ -64,6 +67,7 @@
                 </div>
             </div>
         </div>
+        <!-- Размещаем блок с калькулятором -->
         <div id="calc" style="padding-top: 102px; margin-top: -102px"></div>
         <div class="textBlockHeader">Калькулятор</div>
         <div class="textCalc">Введите первое число:</div>
@@ -82,6 +86,24 @@
                Вычислить
             </div>   
         </button>
+        <!-- Модальное окно вывода результата действий калькулятора -->
+        <div class="maskPage">
+            <div class="modalWindow">
+                <h2> Результат </h2>
+                <hr />
+                <div class="resultCalc">
+                    Основная часть
+                </div>
+                <hr />
+                <div class="resultClose">
+                    <button>
+                        Закрыть
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Размещаем блок "сложности" -->
        <div id="difficulties" style="padding-top: 102px; margin-top: -102px"></div>
         <div class="myActivityBox"> 
             <div class="textBlockHeader">Сложности</div>
@@ -108,10 +130,12 @@
                 </div>
             </div>
         </div>
+        <!-- Добавляем блок "Настроение" -->
         <div id="mood" style="padding-top: 102px; margin-top: -102px"></div>
         <div class="textBlockHeader">Настроение</div>
         <div class="smileImage"><img src="Smile.jpg"></div>
         <div id="contacts" style="padding-top: 102px; margin-top: -102px"></div>
+        <!-- Внизу страницы помещаем блок "контакты" -->
         <div class="boxMainMenu", style="position: relative;">
             <div style="display: flex;">
                 <div class="textMyName">Василий Калягин</div>
@@ -121,21 +145,6 @@
             </div>
         </div>
     </div>
-    <div class="maskPage">
-        <div class="modalWindow">
-            <h2> Результат </h2>
-            <hr />
-            <div class="resultCalc">
-                Основная часть
-            </div>
-            <hr />
-            <div class="resultClose">
-                <button>
-                    Закрыть
-                </button>
-            </div>
-            
-        </div>
-    </div>
+    
 </body>
 </html>
