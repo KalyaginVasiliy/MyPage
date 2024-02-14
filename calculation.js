@@ -4,7 +4,7 @@ function openWindow() {
     let numberOne = Number(elementInputOne.value);
     let elementInputTwo = document.querySelector(".numberTwoData");
     let numberTwo = Number(elementInputTwo.value);
-    let selectCalc = document.querySelector('.calcOperation').value;
+    let selectCalc = document.querySelector('#operationSelect').value;
     let resultCalc = 0;
     if (numberOne && numberTwo) {
         let elementResult = document.querySelector(".resultCalc")
