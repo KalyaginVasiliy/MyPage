@@ -257,7 +257,12 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+/* Параметры реакции текста кнопки при наведении курсора */
 .resultClose > button:hover {
     background-color: #004C93;
     color:rgb(140, 140, 140);
+}
+/* Стиль для скрытия окошка */
+.hiddenWindow {
+    display:none;
 }

@@ -11,6 +11,45 @@
     <!-- подключаем стили -->
     <link rel="stylesheet" href="styles.css", type="text/css", rel="stylesheet">
     <title>Моя страница 1</title>
+    <script>
+        // Функция открытия окна результата вычислений
+        function openWindow() {
+            let elementInputOne = document.querySelector(".numberOneData");
+            let numberOne = Number(elementInputOne.value);
+            let elementInputTwo = document.querySelector(".numberTwoData");
+            let numberTwo = Number(elementInputTwo.value);
+            let selectCalc = document.querySelector('.calcOperation').value;
+            let resultCalc = 0;
+            if (numberOne && numberTwo) {
+                let elementResult = document.querySelector(".resultCalc")
+                switch  (selectCalc) {
+                    case "addition" :
+                    result = numberOne+numberTwo;
+                    elementResult.innerHTML = numberOne + " + " + numberTwo + " = " + result;
+                    break;
+                    case "subtraction" :
+                    result = numberOne-numberTwo;
+                    elementResult.innerHTML = numberOne + " - " + numberTwo + " = " + result;
+                    break;
+                    case "multiplication" :
+                    result = numberOne*numberTwo;
+                    elementResult.innerHTML = numberOne + " * " + numberTwo + " = " + result;
+                    break;
+                    case "division" :
+                    result = numberOne/numberTwo;
+                    elementResult.innerHTML = numberOne + " / " + numberTwo + " = " + result;
+                    break;
+                    }
+                let elementWindow = document.querySelector(".maskPage");
+                elementWindow.classList.remove("hiddenWindow");
+                }
+        }
+         // Функция закрытия окна результата вычислений
+         function showWindow() {
+            let elementWindow = document.querySelector(".maskPage");
+            elementWindow.classList.add("hiddenWindow");
+        }
+    </script>
 </head>
 
 <body>
@@ -71,23 +110,23 @@
         <div id="calc" style="padding-top: 102px; margin-top: -102px"></div>
         <div class="textBlockHeader">Калькулятор</div>
         <div class="textCalc">Введите первое число:</div>
-        <input class="inputCalc", type="number">
+        <input class="inputCalc numberOneData", type="number">
         <div class="textCalc">Выберите операцию:</div>
-        <select class="inputCalc",name="operation" id="operationSelect">
+        <select class="inputCalc calcOperation" id="operationSelect">
             <option value="addition">Сложение +</option>
             <option value="subtraction">Вычитание -</option>
             <option value="multiplication">Умножение *</option>
             <option value="division">Деление /</option>
         </select>
         <div class="textCalc">Введите второе число:</div>
-        <input class="inputCalc", type="number">
+        <input class="inputCalc numberTwoData", type="number">
         <button class="buttonCalc"> 
-            <div class="buttonCalcText">
+            <div class="buttonCalcText", onclick="openWindow()">
                Вычислить
             </div>   
         </button>
         <!-- Модальное окно вывода результата действий калькулятора -->
-        <div class="maskPage">
+        <div class="maskPage hiddenWindow">
             <div class="modalWindow">
                 <h2> Результат </h2>
                 <hr />
@@ -96,7 +135,7 @@
                 </div>
                 <hr />
                 <div class="resultClose">
-                    <button>
+                    <button onclick="showWindow()">
                         Закрыть
                     </button>
                 </div>
